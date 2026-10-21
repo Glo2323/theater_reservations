@@ -1,9 +1,9 @@
 package com.pluralsight;
 
-import javax.swing.text.DateFormatter;
-import java.text.DateFormat;
 import java.time.LocalDate;
+
 import java.time.format.DateTimeFormatter;
+
 import java.util.Scanner;
 
 public class TheaterTicketsApp {
@@ -49,8 +49,8 @@ public class TheaterTicketsApp {
             System.out.printf("%d tickets reserved for %s under %s, %s\n ",
                     numberOfTickets, dateForTheater.format(formatter), lastName, firstName);
         }else {
-            System.out.printf("%d ticket reserved for %s under %s, %s\n ",
-                    numberOfTickets, dateForTheater.format(formatter), lastName, firstName);
+            System.out.printf("%d ticket reserved for %tF under %s, %s\n ",
+                    numberOfTickets, dateForTheater, lastName, firstName);
         }
 
 
