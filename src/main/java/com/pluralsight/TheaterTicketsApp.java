@@ -46,9 +46,11 @@ public class TheaterTicketsApp {
 
         //?Displaying their tickets, name, and date to come in
         if (numberOfTickets > 1) {
-            System.out.printf("%d tickets reserved for %s under %s, %s\n ", numberOfTickets, dateForTheater.format(formatter), lastName, firstName);
+            System.out.printf("%d tickets reserved for %s under %s, %s\n ",
+                    numberOfTickets, dateForTheater.format(formatter), lastName, firstName);
         }else {
-            System.out.printf("%d ticket reserved for %s under %s, %s\n ", numberOfTickets, dateForTheater.format(formatter), lastName, firstName);
+            System.out.printf("%d ticket reserved for %s under %s, %s\n ",
+                    numberOfTickets, dateForTheater.format(formatter), lastName, firstName);
         }
 
 
