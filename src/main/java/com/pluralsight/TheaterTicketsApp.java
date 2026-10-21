@@ -25,12 +25,11 @@ public class TheaterTicketsApp {
 
         //*Asking date they are coming in
         System.out.print("What date will you be coming (MM/dd/yyyy):  \n");
-
+        formatter = DateTimeFormatter.ofPattern("MM/dd/yyyy");
         //*Storing the date
         String date = TheaterTickets.nextLine();
 
         //?Formatting the date
-        formatter = DateTimeFormatter.ofPattern("MM/dd/yyyy");
         LocalDate dateForTheater = LocalDate.parse(date, DateTimeFormatter.ofPattern("MM/dd/yyyy"));
 
         //*Asking how many tickets they want
@@ -38,6 +37,14 @@ public class TheaterTicketsApp {
 
         //*Storing the ticket amount
         int numberOfTickets = TheaterTickets.nextInt();
+
+        //?Displaying their tickets, name, and date to come in
+        if (numberOfTickets > 1) {
+            System.out.printf("%d tickets reserved for %s under %s\n ", numberOfTickets, dateForTheater.format(formatter), name);
+        }else {
+            System.out.printf("%d ticket reserved for %s under %s\n ", numberOfTickets, dateForTheater.format(formatter), name);
+        }
+
 
 
 
